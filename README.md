@@ -1,5 +1,6 @@
 TDDBC Swift Project
 ===================
+[![Build Status](https://travis-ci.org/tddbc/Swift.svg?branch=master)](https://travis-ci.org/tddbc/Swift)
 
 [TDDBC](http://devtesting.jp/tddbc/) で使う Swift 用のプロジェクトです。
 
@@ -53,8 +54,8 @@ Features
 Requirements
 -----------
 
-- Swift4 🎉
-- Xcode9 or later
+- Swift4.2 🎉
+- Xcode10 or later
 - Carhtage
 
 
@@ -121,7 +122,7 @@ License
 
 Licensed under the MIT license.
 
-Copyright (c) 2017 TDD BaseCamp and other contributors
+Copyright (c) 2018 TDD BaseCamp and other contributors
 
 - http://devtesting.jp/tddbc/
 - https://github.com/tddbc
