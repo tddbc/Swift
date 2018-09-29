@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2475E28BE43743071E748308 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E38E726EC3D670B210AF /* Sample.swift */; };
+		62AB32AE215F0C8E00758E78 /* MirrorDiffKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */; };
 		62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8A1F7F56EC00739528 /* AppDelegate.swift */; };
 		62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8C1F7F56EC00739528 /* ViewController.swift */; };
 		62D11D901F7F56EC00739528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D8E1F7F56EC00739528 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		2475EAC2FE8BE30709BB9C3D /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = file.resolved; path = Cartfile.resolved; sourceTree = "<group>"; };
 		2475EB12A3CB11BCC92EB7A3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2475EF0900E7AE011CC38D2E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MirrorDiffKit.framework; path = Carthage/Build/iOS/MirrorDiffKit.framework; sourceTree = "<group>"; };
 		62D11D871F7F56EC00739528 /* TDDBCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDBCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D11D8A1F7F56EC00739528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62D11D8C1F7F56EC00739528 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62AB32AE215F0C8E00758E78 /* MirrorDiffKit.framework in Frameworks */,
 				62D11DB61F7F614E00739528 /* Nimble.framework in Frameworks */,
 				62D11DB71F7F614E00739528 /* Quick.framework in Frameworks */,
 			);
@@ -136,6 +139,7 @@
 		62D11DAF1F7F601E00739528 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */,
 				62D11DB01F7F601E00739528 /* Nimble.framework */,
 				62D11DB11F7F601E00739528 /* Quick.framework */,
 			);
@@ -250,14 +254,16 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MirrorDiffKit.framework",
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/Quick.framework",
 				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/Nimble.framework",
+				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/MirrorDiffKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
