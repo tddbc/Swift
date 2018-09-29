@@ -7,3 +7,6 @@ xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
 
 before_install:
   - carthage update --platform ios --no-use-binaries
+
+notifications:
+  email: false
