@@ -62,12 +62,20 @@ Requirements
 
 ### How to Install Carthage
 
-このプロジェクトは、サードパーティモジュールを [Carthage](https://github.com/Carthage/Carthage) によって管理しています。
-あらかじめ Carthage をインストールしておいてください:
-
+このプロジェクトは、サードパーティライブラリを [Carthage](https://github.com/Carthage/Carthage) によって管理しています。Carthage は [Homebrew](https://brew.sh/index_ja) でインストールできます：
 
 ```console
 $ brew install carthage
+```
+
+
+
+### How to install third party libraries
+
+Carthage が準備できたら、ビルド前に以下のコマンドを実行してください：
+
+```console
+$ carthage bootstrap --platform iOS --no-use-binaries
 ```
 
 
