@@ -1,11 +1,36 @@
-// swift-tools-version:3.0
-
+// swift-tools-version:5.2
 import PackageDescription
 
 let package = Package(
     name: "Nimble",
-    exclude: [
-        "Sources/NimbleObjectiveC",
-        "Tests/NimbleTests/objc",
-    ]
+    platforms: [
+      .macOS(.v10_10), .iOS(.v8), .tvOS(.v9)
+    ],
+    products: [
+        .library(name: "Nimble", targets: ["Nimble"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/mattgallagher/CwlPreconditionTesting.git", .upToNextMajor(from: "2.0.0")),
+    ],
+    targets: [
+        .target(
+            name: "Nimble", 
+            dependencies: {
+                #if os(macOS)
+                return [
+                    "CwlPreconditionTesting",
+                    .product(name: "CwlPosixPreconditionTesting", package: "CwlPreconditionTesting")
+                ]
+                #else
+                return []
+                #endif
+            }()
+        ),
+        .testTarget(
+            name: "NimbleTests", 
+            dependencies: ["Nimble"], 
+            exclude: ["objc"]
+        ),
+    ],
+    swiftLanguageVersions: [.v5]
 )

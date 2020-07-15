@@ -1,13 +1,11 @@
 ![MirrorDiffKit](https://raw.githubusercontent.com/Kuniwak/MirrorDiffKit/master/Documentation/Images/logo.png)
 =============
 
-![Swift 4.2 compatible](https://img.shields.io/badge/Swift%20version-4.2-green.svg)
+![Swift 5.0 compatible](https://img.shields.io/badge/Swift%20version-5.0-green.svg)
 ![CocoaPods](https://img.shields.io/cocoapods/v/MirrorDiffKit.svg)
 ![Carthage](https://img.shields.io/badge/Carthage-compatible-green.svg)
 ![Swift Package Manager](https://img.shields.io/badge/SPM-compatible-green.svg)
 [![MIT license](https://img.shields.io/badge/lisence-MIT-yellow.svg)](https://github.com/Kuniwak/MirrorDiffKit/blob/master/LICENSE)
-[![Build Status](https://www.bitrise.io/app/94e8fe199a9a670b/status.svg?token=XaNhf80F5x3pimGVlyPb-w&branch=master)](https://www.bitrise.io/app/94e8fe199a9a670b)
-
 
 A tool for providing the 2 features for efficient testing:
 
@@ -17,12 +15,17 @@ A tool for providing the 2 features for efficient testing:
 
 ![](./Documentation/Images/XcodePreview.png)
 
+| Platform | Status |
+|:---------|:------:|
+| macOS    | [![Bitrise](https://app.bitrise.io/app/94e8fe199a9a670b/status.svg?token=XaNhf80F5x3pimGVlyPb-w&branch=master)](https://app.bitrise.io/app/94e8fe199a9a670b) |
+| Linux    | [![CircleCI](https://circleci.com/gh/Kuniwak/MirrorDiffKit/tree/master.svg?style=svg)](https://circleci.com/gh/Kuniwak/MirrorDiffKit/tree/master) |
+
 
 
 Usage
 -----
 
-### `diff(between: Any, and: Any)`
+### `diff<T>(between: T, and: T)`
 
 ```swift
 import MirrorDiffKit
@@ -83,7 +86,7 @@ Add the following line to your `Package.swift`:
 
 
 ```
-.Package(url: "https://github.com/Kuniwak/MirrorDiffKit.git")
+.package(url: "https://github.com/Kuniwak/MirrorDiffKit.git")
 ```
 
 

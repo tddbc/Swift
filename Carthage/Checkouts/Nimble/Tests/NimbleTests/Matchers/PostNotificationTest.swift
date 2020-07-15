@@ -3,32 +3,20 @@ import Nimble
 import Foundation
 
 final class PostNotificationTest: XCTestCase, XCTestCaseProvider {
-    static var allTests: [(String, (PostNotificationTest) -> () throws -> Void)] {
-        return [
-            ("testPassesWhenNoNotificationsArePosted", testPassesWhenNoNotificationsArePosted),
-            ("testPassesWhenExpectedNotificationIsPosted", testPassesWhenExpectedNotificationIsPosted),
-            ("testPassesWhenAllExpectedNotificationsArePosted", testPassesWhenAllExpectedNotificationsArePosted),
-            ("testFailsWhenNoNotificationsArePosted", testFailsWhenNoNotificationsArePosted),
-            ("testFailsWhenNotificationWithWrongNameIsPosted", testFailsWhenNotificationWithWrongNameIsPosted),
-            ("testFailsWhenNotificationWithWrongObjectIsPosted", testFailsWhenNotificationWithWrongObjectIsPosted),
-            ("testPassesWhenExpectedNotificationEventuallyIsPosted", testPassesWhenExpectedNotificationEventuallyIsPosted),
-        ]
-    }
-
     let notificationCenter = NotificationCenter()
 
     func testPassesWhenNoNotificationsArePosted() {
         expect {
             // no notifications here!
             return nil
-        }.to(postNotifications(beEmpty(), fromNotificationCenter: notificationCenter))
+        }.to(postNotifications(beEmpty()))
     }
 
     func testPassesWhenExpectedNotificationIsPosted() {
         let testNotification = Notification(name: Notification.Name("Foo"), object: nil)
         expect {
             self.notificationCenter.post(testNotification)
-        }.to(postNotifications(equal([testNotification]), fromNotificationCenter: notificationCenter))
+        }.to(postNotifications(equal([testNotification]), from: notificationCenter))
     }
 
     func testPassesWhenAllExpectedNotificationsArePosted() {
@@ -40,7 +28,7 @@ final class PostNotificationTest: XCTestCase, XCTestCaseProvider {
             self.notificationCenter.post(n1)
             self.notificationCenter.post(n2)
             return nil
-        }.to(postNotifications(equal([n1, n2]), fromNotificationCenter: notificationCenter))
+        }.to(postNotifications(equal([n1, n2]), from: notificationCenter))
     }
 
     func testFailsWhenNoNotificationsArePosted() {
@@ -49,7 +37,7 @@ final class PostNotificationTest: XCTestCase, XCTestCaseProvider {
             expect {
                 // no notifications here!
                 return nil
-            }.to(postNotifications(equal([testNotification]), fromNotificationCenter: self.notificationCenter))
+            }.to(postNotifications(equal([testNotification]), from: self.notificationCenter))
         }
     }
 
@@ -60,7 +48,7 @@ final class PostNotificationTest: XCTestCase, XCTestCaseProvider {
             expect {
                 self.notificationCenter.post(n2)
                 return nil
-            }.to(postNotifications(equal([n1]), fromNotificationCenter: self.notificationCenter))
+            }.to(postNotifications(equal([n1]), from: self.notificationCenter))
         }
     }
 
@@ -71,21 +59,17 @@ final class PostNotificationTest: XCTestCase, XCTestCaseProvider {
             expect {
                 self.notificationCenter.post(n2)
                 return nil
-            }.to(postNotifications(equal([n1]), fromNotificationCenter: self.notificationCenter))
+            }.to(postNotifications(equal([n1]), from: self.notificationCenter))
         }
     }
 
     func testPassesWhenExpectedNotificationEventuallyIsPosted() {
-        #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-            let testNotification = Notification(name: Notification.Name("Foo"), object: nil)
-            expect {
-                deferToMainQueue {
-                    self.notificationCenter.post(testNotification)
-                }
-                return nil
-            }.toEventually(postNotifications(equal([testNotification]), fromNotificationCenter: notificationCenter))
-        #else
-            print("\(#function) is missing because toEventually is not implement on this platform")
-        #endif
+        let testNotification = Notification(name: Notification.Name("Foo"), object: nil)
+        expect {
+            deferToMainQueue {
+                self.notificationCenter.post(testNotification)
+            }
+            return nil
+        }.toEventually(postNotifications(equal([testNotification]), from: notificationCenter))
     }
 }
