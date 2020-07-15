@@ -3,11 +3,11 @@
 //  ___PROJECTNAME___
 //
 //  Created by ___FULLUSERNAME___ on ___DATE___.
-//___COPYRIGHT___
+//  ___COPYRIGHT___
 //
 
-#import <Quick/Quick.h>
-#import <Nimble/Nimble.h>
+@import Quick;
+@import Nimble;
 
 QuickSpecBegin(___FILEBASENAMEASIDENTIFIER___)
 

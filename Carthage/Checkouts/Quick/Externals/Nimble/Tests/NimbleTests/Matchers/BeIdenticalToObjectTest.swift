@@ -2,18 +2,7 @@ import Foundation
 import XCTest
 import Nimble
 
-final class BeIdenticalToObjectTest: XCTestCase, XCTestCaseProvider {
-    static var allTests: [(String, (BeIdenticalToObjectTest) -> () throws -> Void)] {
-        return [
-            ("testBeIdenticalToPositive", testBeIdenticalToPositive),
-            ("testBeIdenticalToNegative", testBeIdenticalToNegative),
-            ("testBeIdenticalToPositiveMessage", testBeIdenticalToPositiveMessage),
-            ("testBeIdenticalToNegativeMessage", testBeIdenticalToNegativeMessage),
-            ("testFailsOnNils", testFailsOnNils),
-            ("testOperators", testOperators),
-        ]
-    }
-
+final class BeIdenticalToObjectTest: XCTestCase {
     private class BeIdenticalToObjectTester {}
     private let testObjectA = BeIdenticalToObjectTester()
     private let testObjectB = BeIdenticalToObjectTester()
