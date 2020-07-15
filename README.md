@@ -57,6 +57,7 @@ Versions
 
 | Swift Version | Tag                                                                  | Xcode     |
 |:--------------|:---------------------------------------------------------------------|:----------|
+| 5.0           | [`swift-5.0`](https://github.com/tddbc/Swift/releases/tag/swift-5.0) | Xcode 11.5  |
 | 4.2           | [`swift-4.2`](https://github.com/tddbc/Swift/releases/tag/swift-4.2) | Xcode 10  |
 | 4.1           | [`swift-4.1`](https://github.com/tddbc/Swift/releases/tag/swift-4.1) | Xcode 9.3 |
 | 4.0           | [`swift-4.0`](https://github.com/tddbc/Swift/releases/tag/swift-4.0) | Xcode 9   |
