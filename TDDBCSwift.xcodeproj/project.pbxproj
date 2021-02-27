@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2475E28BE43743071E748308 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E38E726EC3D670B210AF /* Sample.swift */; };
-		62AB32AE215F0C8E00758E78 /* MirrorDiffKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */; };
 		62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8A1F7F56EC00739528 /* AppDelegate.swift */; };
 		62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8C1F7F56EC00739528 /* ViewController.swift */; };
 		62D11D901F7F56EC00739528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D8E1F7F56EC00739528 /* Main.storyboard */; };
@@ -16,8 +15,12 @@
 		62D11D951F7F56EC00739528 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D931F7F56EC00739528 /* LaunchScreen.storyboard */; };
 		62D11DA01F7F56EC00739528 /* ExampleXCTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D9F1F7F56EC00739528 /* ExampleXCTestTests.swift */; };
 		62D11DAD1F7F580E00739528 /* ExampleQuickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11DAC1F7F580E00739528 /* ExampleQuickTests.swift */; };
-		62D11DB61F7F614E00739528 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D11DB01F7F601E00739528 /* Nimble.framework */; };
-		62D11DB71F7F614E00739528 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62D11DB11F7F601E00739528 /* Quick.framework */; };
+		8948F2C925E9DB9600EF8BE2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C625E9DB9600EF8BE2 /* Quick.xcframework */; };
+		8948F2CA25E9DB9600EF8BE2 /* MirrorDiffKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C725E9DB9600EF8BE2 /* MirrorDiffKit.xcframework */; };
+		8948F2CB25E9DB9600EF8BE2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C825E9DB9600EF8BE2 /* Nimble.xcframework */; };
+		8948F2D425E9DC0A00EF8BE2 /* MirrorDiffKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C725E9DB9600EF8BE2 /* MirrorDiffKit.xcframework */; };
+		8948F2D525E9DC0A00EF8BE2 /* Nimble.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C825E9DB9600EF8BE2 /* Nimble.xcframework */; };
+		8948F2D625E9DC0B00EF8BE2 /* Quick.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8948F2C625E9DB9600EF8BE2 /* Quick.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		62D11DAC1F7F580E00739528 /* ExampleQuickTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleQuickTests.swift; sourceTree = "<group>"; };
 		62D11DB01F7F601E00739528 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		62D11DB11F7F601E00739528 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		8948F2C625E9DB9600EF8BE2 /* Quick.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Quick.xcframework; path = Carthage/Build/Quick.xcframework; sourceTree = "<group>"; };
+		8948F2C725E9DB9600EF8BE2 /* MirrorDiffKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MirrorDiffKit.xcframework; path = Carthage/Build/MirrorDiffKit.xcframework; sourceTree = "<group>"; };
+		8948F2C825E9DB9600EF8BE2 /* Nimble.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Nimble.xcframework; path = Carthage/Build/Nimble.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8948F2D425E9DC0A00EF8BE2 /* MirrorDiffKit.xcframework in Frameworks */,
+				8948F2D525E9DC0A00EF8BE2 /* Nimble.xcframework in Frameworks */,
+				8948F2D625E9DC0B00EF8BE2 /* Quick.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +73,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62AB32AE215F0C8E00758E78 /* MirrorDiffKit.framework in Frameworks */,
-				62D11DB61F7F614E00739528 /* Nimble.framework in Frameworks */,
-				62D11DB71F7F614E00739528 /* Quick.framework in Frameworks */,
+				8948F2C925E9DB9600EF8BE2 /* Quick.xcframework in Frameworks */,
+				8948F2CA25E9DB9600EF8BE2 /* MirrorDiffKit.xcframework in Frameworks */,
+				8948F2CB25E9DB9600EF8BE2 /* Nimble.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +148,9 @@
 		62D11DAF1F7F601E00739528 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8948F2C725E9DB9600EF8BE2 /* MirrorDiffKit.xcframework */,
+				8948F2C825E9DB9600EF8BE2 /* Nimble.xcframework */,
+				8948F2C625E9DB9600EF8BE2 /* Quick.xcframework */,
 				62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */,
 				62D11DB01F7F601E00739528 /* Nimble.framework */,
 				62D11DB11F7F601E00739528 /* Quick.framework */,
@@ -153,7 +165,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62D11DA41F7F56EC00739528 /* Build configuration list for PBXNativeTarget "TDDBCSwift" */;
 			buildPhases = (
-				62D11DAE1F7F5D0100739528 /* ShellScript */,
 				62D11D831F7F56EC00739528 /* Sources */,
 				62D11D841F7F56EC00739528 /* Frameworks */,
 				62D11D851F7F56EC00739528 /* Resources */,
@@ -244,28 +255,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		62D11DAE1F7F5D0100739528 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/MirrorDiffKit.framework",
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/Quick.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/Nimble.framework",
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORK_FOLDER_PATH)/MirrorDiffKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62D11D831F7F56EC00739528 /* Sources */ = {
