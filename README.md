@@ -86,7 +86,7 @@ $ brew install carthage
 Carthage が準備できたら、ビルド前に以下のコマンドを実行してください：
 
 ```console
-$ carthage bootstrap --platform iOS --no-use-binaries
+$ carthage bootstrap --platform iOS --no-use-binaries --use-xcframeworks
 ```
 
 
